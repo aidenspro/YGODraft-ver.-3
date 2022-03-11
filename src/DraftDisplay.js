@@ -31,7 +31,6 @@ export default function draftDisplay(props) {
   return (
     <div>
       <div className="cardContainer">{getCards()}</div>
-      
     </div>
   );
 }
