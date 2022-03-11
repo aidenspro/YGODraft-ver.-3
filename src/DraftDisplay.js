@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, createRef } from 'react';
 import CreateCard from './CreateCard';
-import DraftDisplay from './DraftDisplay';
+import DraftPreview from './DraftPreview';
 
 let packNum = 1; //number of the current card set
 
@@ -31,7 +31,7 @@ export default function draftDisplay(props) {
   return (
     <div>
       <div className="cardContainer">{getCards()}</div>
-      <DraftDisplay />
+      
     </div>
   );
 }
