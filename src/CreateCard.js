@@ -26,13 +26,14 @@ export default function createCard(props) {
   }
 
   return (
-  <div className="card" onClick={props.handleOnClick}>
+
       <img id={cardInfo[0]} 
+        onClick={props.handleOnClick}
         className='cardImage'
         src={'https://storage.googleapis.com/ygoprodeck.com/pics/' +
         cardInfo[0] +'.jpg'}
         alt={cardInfo[1]}
       />
-  </div>
+
   )
 }
