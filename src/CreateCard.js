@@ -12,28 +12,58 @@ export default function createCard(props) {
         //return obj = data;
         //console.log(data);
         setCardJSON(data); // setting obj using setObj
-      })
+      });
+  }, [props.changeCard]);
 
-  },[props.changeCard]);
+  //assigns array based on jSon info
+  const cardInfo = [
+    cardJSON.id,
+    cardJSON.name,
+    cardJSON.desc,
+    cardJSON.type,
+    cardJSON.race,
+    cardJSON.archetype,
+    cardJSON.atk,
+    cardJSON.def,
+    cardJSON.level,
+    cardJSON.attribute,
+  ];
 
-//assigns array based on jSon info
-  const cardInfo = [cardJSON.id,cardJSON.name,cardJSON.desc,cardJSON.type,cardJSON.race,cardJSON.archetype,cardJSON.atk,cardJSON.def,cardJSON.level,cardJSON.attribute]
-  
-  if(cardInfo[6] >= 0 ) {
-  cardInfo[11]= "ATK/DEF : " + cardInfo[6] + "/" + cardInfo[7];
-  }else{
-    cardInfo[11]=" "
+  if (cardInfo[6] >= 0) {
+    cardInfo[11] = 'ATK/DEF : ' + cardInfo[6] + '/' + cardInfo[7];
+  } else {
+    cardInfo[11] = ' ';
   }
 
-  return (
-
-      <img id={cardInfo[0]} 
-        onClick={props.handleOnClick}
-        className='cardImage'
-        src={'https://storage.googleapis.com/ygoprodeck.com/pics/' +
-        cardInfo[0] +'.jpg'}
+  const setBigImage = () => {
+    props.setCardInfo(cardInfo);
+    props.setBigImage(
+      <img
+        id={cardInfo[0]}
+        onClick={() => props.handleOnClick(cardInfo)}
+        className="cardImage"
+        src={
+          'https://storage.googleapis.com/ygoprodeck.com/pics/' +
+          cardInfo[0] +
+          '.jpg'
+        }
         alt={cardInfo[1]}
       />
+    );
+  };
 
-  )
+  return (
+    <img
+      id={cardInfo[0]}
+      onClick={() => props.handleOnClick(cardInfo)}
+      onMouseEnter={() => setBigImage()}
+      className="cardImage"
+      src={
+        'https://storage.googleapis.com/ygoprodeck.com/pics/' +
+        cardInfo[0] +
+        '.jpg'
+      }
+      alt={cardInfo[1]}
+    />
+  );
 }

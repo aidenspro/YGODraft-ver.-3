@@ -2,14 +2,39 @@ h1, p {
   font-family: Lato;
 }
 
+
+.container {  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 0.6fr 1.4fr; 
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "bigPreview cardDisplay"
+    "bigPreview draftedCards";
+  margin-right: 1%;
+}
+
+.bigPreview {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "previewCardImage"
+    "cardInfo";
+  grid-area: bigPreview;
+}
+
 .cardContainer{
-  position: absolute;
+  
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
   grid-template-rows: 1fr; 
   gap: 0px 10px; 
   grid-template-areas: 
     ". . . . ."; 
+  grid-area: cardDisplay; 
+  background-color: rgb(107, 107, 107)
 }
 
 .cardImage{
@@ -17,10 +42,33 @@ h1, p {
   height:100%;
   object-fit: cover;
   border: 5px solid white;
-
 }
-
+.draftedCardImage{
+  max-width: 12%;
+  max-height: 12%;
+}
+.draftedCardImage:hover{
+  scale: 1.1;
+ }
+ 
 .cardImage:hover{
  border: 5px solid rgb(228, 211, 79);
  scale: 1.1;
+}
+
+.cardInfo { grid-area: cardInfo; 
+  text-align: center;
+  white-space: pre-wrap;
+  background-color: rgb(75, 74, 74)
+}
+
+.previewCardImage {grid-area: previewCardImage;
+background-color: grey;
+}
+
+.draftedCards {
+
+  background-color: rgb(107, 107, 107);
+  grid-area: draftedCards; 
+
 }
