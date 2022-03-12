@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, createRef } from 'react';
 import CreateCard from './CreateCard';
 import DraftPreview from './DraftPreview';
-import BigPreview from './BigPreview';
+import CreateDeckList from './CreateDeckList';
 
 
 let packNum = 1; //number of the current card set
@@ -47,7 +47,7 @@ export default function draftDisplay(props) {
       return cardArray;
     }
     else
-    return (<div> Draft over : Download Deck -  </div>)
+    return (<CreateDeckList deckList={draftedCards}/>)
 
     return cardArray;
   };
