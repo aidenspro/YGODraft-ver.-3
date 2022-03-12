@@ -7,8 +7,7 @@ const setBigImage = (i) => {
   props.setCardInfo(props.draftedCards[i]);
   props.setBigImage(
     <img id={props.draftedCards[i][0]} 
-      width={'100%'}
-      height={'100%'}
+      className='previewCardImage'
       src={'https://storage.googleapis.com/ygoprodeck.com/pics/' +
       props.draftedCards[i][0] +'.jpg'}
       alt={props.draftedCards[i][1]}

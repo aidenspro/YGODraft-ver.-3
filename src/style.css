@@ -3,47 +3,11 @@ h1, p {
 }
 
 
-.container {  display: grid;
-  grid-template-columns: 0.6fr 1.4fr; 
-  grid-template-rows: 0.6fr 1.9fr 0.5fr; 
-  gap: 10px 10px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "bigPreview cardDisplay"
-    "bigPreview draftedCards"
-    ". ."; 
-  margin-right: 1%;
-}
 
-.bigPreview {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.7fr 1.3fr;
-  gap: 10px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "previewCardImage"
-    "cardInfo";
-  grid-area: bigPreview;
-  max-width:100%;
-  max-height:100%;
-}
-
-.cardContainer{
-  
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 0px 10px; 
-  grid-template-areas: 
-    ". . . . ."; 
-  grid-area: cardDisplay; 
-  background-color: rgb(107, 107, 107)
-}
 
 .cardImage{
-  width:100%;
-  height:100%;
-  object-fit: cover;
+  max-width:100%;
+  max-height:100%;
   border: 5px solid white;
 }
 .draftedCardImage{
@@ -51,7 +15,9 @@ h1, p {
   max-height: 12%;
 }
 .draftedCardImage:hover{
+
   scale: 1.1;
+  
  }
  
 .cardImage:hover{
@@ -59,7 +25,9 @@ h1, p {
  scale: 1.1;
 }
 
-.cardInfo { grid-area: cardInfo; 
+.cardInfo {
+  max-width:100%;
+  max-height:100%;
   text-align: center;
   white-space: pre-wrap;
   background-color: rgba(110, 159, 214, 0.734);
@@ -74,15 +42,72 @@ text-decoration: none;
 font-style: normal;
 font-variant: normal;
 text-transform: none;
+grid-area: cardInfo;
 }
 
-.previewCardImage {grid-area: previewCardImage;
-background-color: grey;
+.container {  
+  margin-right: 1%;
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: 0.4fr 1.60fr; 
+  grid-template-rows: 1.3fr 1.3fr 0.4fr;
+  gap: 20px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "bigPreview draftArea"
+    "bigPreview draftArea"
+    ". .";
+  
 }
 
-.draftedCards {
+.bigPreview {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "previewCardImage"
+    "cardInfo";
+  grid-area: bigPreview;
+}
 
-  background-color: rgb(107, 107, 107);
-  grid-area: draftedCards; 
+.previewCardImage { 
+  max-width:100%;
+  max-height:100%;
+  grid-area: previewCardImage; }
+
+
+.draftArea {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 1.3fr;
+  gap: 20px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "cardDisplay"
+    "draftedCards";
+  grid-area: draftArea;
+  max-width:100%;
+  max-height:100%;
+}
+
+.cardDisplay {
+  max-width:100%;
+  max-height:100%;
+  padding-top: 2%;
+  padding-right: 2%;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . . ."; 
+  grid-area: cardDisplay; 
+}
+
+.cardCover { 
+background-color: brown;
+visibility: visible;
 
 }
+
+.draftedCards { grid-area: draftedCards; }

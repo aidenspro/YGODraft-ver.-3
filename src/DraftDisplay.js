@@ -9,13 +9,13 @@ const draftedCards = [];
 
 export default function draftDisplay(props) {
   const testCard = [55144522,"Click Here","To Start Draft","test"]
+  const coverRef = useRef();
 
   //when updated reloads the createCard component for a new card
   const [changeCard, setChangeCard] = useState(0);
   const [bigImage, setBigImage] = useState(
     <img id={"start card"} 
-        width={'100%'}
-        height={'100%'}
+        className='previewCardImage'
         src={'https://storage.googleapis.com/ygoprodeck.com/pics/' +
         55144522 +'.jpg'}
         alt={"Click Here To Start Draft"}
@@ -28,6 +28,8 @@ export default function draftDisplay(props) {
     draftedCards.push(currentCard)
     setChangeCard(packNum); //reload card component
     packNum++; //update pack#
+    if(packNum == (props.numberOfPacks + 1) )
+      coverRef.current.style = "visibility: visible"
   };
 
   const getCards = () => {
@@ -47,21 +49,23 @@ export default function draftDisplay(props) {
   };
 
   return (
-<div className="container">
-  <div className="bigPreview">
-    <div className="previewCardImage">{bigImage}</div>
-      <div className="cardInfo">
+<div class="container">
+  <div class="bigPreview">
+    <div class="previewCardImage">{bigImage}</div>
+    <div class="cardInfo">
         {cardInfo[1]}{'\n'}
         {cardInfo[4] + "/" + cardInfo[3]}{'\n'}
         {cardInfo[11]}{'\n'}
         {cardInfo[2]}
-      </div>
+    </div>
   </div>
-  <div className="cardDisplay">
-  <div className="cardContainer">{getCards()}</div>
-  </div>
-  <div className={'draftedCards'}>
-  <DraftPreview draftedCards={draftedCards} setBigImage={setBigImage}setCardInfo={setCardInfo}/>
+  <div class="draftArea">
+    <div class="cardDisplay">
+      {getCards()}
+    </div>
+    <div class="draftedCards">
+    <DraftPreview draftedCards={draftedCards} setBigImage={setBigImage}setCardInfo={setCardInfo}/>
+    </div>
   </div>
 </div>
   );
