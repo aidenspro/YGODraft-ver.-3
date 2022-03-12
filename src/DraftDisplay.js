@@ -28,12 +28,12 @@ export default function draftDisplay(props) {
     draftedCards.push(currentCard)
     setChangeCard(packNum); //reload card component
     packNum++; //update pack#
-    if(packNum == (props.numberOfPacks + 1) )
-      coverRef.current.style = "visibility: visible"
+    
   };
 
   const getCards = () => {
     const cardArray = [];
+    if(packNum != (props.numberOfPacks + 1) ){
     for (let i = 0; i < props.cardsPerPack; i++)
       cardArray[i] = (
         <CreateCard
@@ -44,6 +44,10 @@ export default function draftDisplay(props) {
           setCardInfo={setCardInfo}
         />
       );
+      return cardArray;
+    }
+    else
+    return (<div> Draft over : Download Deck -  </div>)
 
     return cardArray;
   };
