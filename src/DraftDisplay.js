@@ -14,7 +14,8 @@ export default function draftDisplay(props) {
   const [changeCard, setChangeCard] = useState(0);
   const [bigImage, setBigImage] = useState(
     <img id={"start card"} 
-        className='cardImage'
+        width={'100%'}
+        height={'100%'}
         src={'https://storage.googleapis.com/ygoprodeck.com/pics/' +
         55144522 +'.jpg'}
         alt={"Click Here To Start Draft"}

@@ -4,25 +4,28 @@ h1, p {
 
 
 .container {  display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
-  grid-template-rows: 0.6fr 1.4fr; 
+  grid-template-columns: 0.6fr 1.4fr; 
+  grid-template-rows: 0.6fr 1.9fr 0.5fr; 
   gap: 10px 10px;
   grid-auto-flow: row;
   grid-template-areas:
     "bigPreview cardDisplay"
-    "bigPreview draftedCards";
+    "bigPreview draftedCards"
+    ". ."; 
   margin-right: 1%;
 }
 
 .bigPreview {  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.7fr 1.3fr;
   gap: 10px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "previewCardImage"
     "cardInfo";
   grid-area: bigPreview;
+  max-width:100%;
+  max-height:100%;
 }
 
 .cardContainer{
@@ -59,7 +62,18 @@ h1, p {
 .cardInfo { grid-area: cardInfo; 
   text-align: center;
   white-space: pre-wrap;
-  background-color: rgb(75, 74, 74)
+  background-color: rgba(110, 159, 214, 0.734);
+
+font-family: "Times New Roman", Times, serif;
+font-size: 20px;
+letter-spacing: -0.8px;
+word-spacing: 1px;
+color: #000000;
+font-weight: 400;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
 }
 
 .previewCardImage {grid-area: previewCardImage;
