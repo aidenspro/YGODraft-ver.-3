@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import CardArray from './CardArray';
+
+const cardArray = CardArray();
 
 export default function createCard(props) {
   const [cardJSON, setCardJSON] = useState([]);
 
+  function getRandomInt() {
+    //console.log(cardArray[getRandomInt()])
+    return Math.floor(Math.random() * cardArray.length);
+  }
+
   useEffect(() => {
-    fetch('https://db.ygoprodeck.com/api/v7/randomcard.php')
+    fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?id=' + cardArray[getRandomInt()])
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         //return obj = data;
         //console.log(data);
-        setCardJSON(data); // setting obj using setObj
+        setCardJSON(data.data[0]); // setting obj using setObj
       });
   }, [props.changeCard]);
 
