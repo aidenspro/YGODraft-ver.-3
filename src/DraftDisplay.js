@@ -54,7 +54,10 @@ export default function draftDisplay(props) {
 
   return (
 <div className="container">
-  <div className="bigPreview">
+    <div className="cardDisplay">
+      {getCards()}
+    </div>
+    <div className="bigPreview">
     <div className="previewCardImage">{bigImage}</div>
     <div className="cardInfo">
         {cardInfo[1]}{'\n'}
@@ -63,14 +66,9 @@ export default function draftDisplay(props) {
         {cardInfo[2]}
     </div>
   </div>
-  <div className="draftArea">
-    <div className="cardDisplay">
-      {getCards()}
-    </div>
     <div className="draftedCards">
     <DraftPreview draftedCards={draftedCards} setBigImage={setBigImage}setCardInfo={setCardInfo}/>
     </div>
-  </div>
 </div>
   );
 }

@@ -65,15 +65,7 @@ grid-area: cardInfo;
 }
 
 .container {  
-  margin-right: 1%;
-  margin-top: 3%;
-  display: grid; 
-  grid-template-columns: 100%; 
-  grid-template-rows: 40% 60%; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "cardDisplay"
-    "bigPreview draftedCards"; 
+
 
 }
 
@@ -87,7 +79,8 @@ grid-area: cardInfo;
     "cardInfo";
   grid-area: bigPreview;
   background-color: rgb(0, 0, 0);
-
+  max-height: 40%;
+  max-width: 40%;
   border: 5px solid #8a7f7f
 }
 
@@ -118,6 +111,5 @@ grid-area: cardInfo;
 
 
 .draftedCards { grid-area: draftedCards; 
-min-width: 100%;
-max-width: 100%;
+
 }
