@@ -14,8 +14,8 @@ html {
 .draftedCardImage{
   max-width: 12%;
   max-height: 12%;
-  min-width: 12%;
-  min-height: 12%;
+  min-width: 20px;
+  min-height: 40px;
 }
 .draftedCardImage:hover{
   scale: 1.1;
@@ -118,6 +118,7 @@ grid-area: cardInfo;
   grid-area: draftArea;
   max-width:100%;
   max-height:100%;
+  
  
 }
 
@@ -139,4 +140,6 @@ grid-area: cardInfo;
 
 
 
-.draftedCards { grid-area: draftedCards; }
+.draftedCards { grid-area: draftedCards; 
+  min-height: 400px;
+}
