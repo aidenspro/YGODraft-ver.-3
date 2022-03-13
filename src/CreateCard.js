@@ -49,7 +49,6 @@ export default function createCard(props) {
       <img
         id={cardInfo[0]}
         className='previewCardImage'
-        onClick={() => props.handleOnClick(cardInfo)}
         src={
           'https://storage.googleapis.com/ygoprodeck.com/pics/' +
           cardInfo[0] +
