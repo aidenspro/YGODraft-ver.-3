@@ -24,11 +24,10 @@ export default function saveList(props) {
   const downloadLink = window.URL.createObjectURL(data);
 
   return (
-    <>
-      <a className={'fakebutton'} download="list.ydk" href={downloadLink}>
-        {' '}
-        Download
+    
+      <a download="list.ydk" href={downloadLink}>
+      <div className={'fakebutton'} > Download </div>
       </a>
-    </>
+
   );
 }

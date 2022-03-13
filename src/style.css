@@ -14,6 +14,8 @@ html {
 .draftedCardImage{
   max-width: 12%;
   max-height: 12%;
+  min-width: 12%;
+  min-height: 12%;
 }
 .draftedCardImage:hover{
   scale: 1.1;
@@ -21,15 +23,30 @@ html {
  
 .cardImage:hover{
  
- scale: 1.1;
+ scale: 1.2;
+ cursor: pointer;
 }
 
 .cardInfo:hover{
   overflow-y: scroll;
  }
 
+ .fakebutton{
+  grid-area: link;
+  text-align: center;
+  border: 5px solid #000000;
+  background-color: #199319;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  
+}
+.link{
+  grid-area: link;
+}
+
 .cardInfo {
-  max-width: 400px;
+  
   max-height: 400px;
   
   min-height: 400px;
@@ -76,6 +93,7 @@ grid-area: cardInfo;
   background-color: rgb(0, 0, 0);
   max-width: 100%;
   max-height: 100%;
+  border: 5px solid #8a7f7f
 }
 
 .previewCardImage {
@@ -107,14 +125,14 @@ grid-area: cardInfo;
   text-align: center;
   max-width:100%;
   max-height:100%;
-  padding-top: 2%;
-  padding-right: 2%;
+  padding: 5px;
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
+  grid-template-rows: 1fr 1fr; 
   gap: 0px 10px; 
   grid-template-areas: 
-    ". . . . ."; 
+    ". . link . . "
+    ". . . . . "; 
   grid-area: cardDisplay; 
   background-color: rgba(2, 2, 2, 0.686);
 }
