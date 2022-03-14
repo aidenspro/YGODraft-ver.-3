@@ -7,6 +7,7 @@ html {
 }
 
 .cardImage{
+
   height: 100%;
   width: 100%;
   margin-left: 15px;
@@ -14,12 +15,11 @@ html {
   max-width: 240px;
 
 }
+
+
 .draftedCardImage{
-  max-width: 12%;
-  max-height: 12%;
-  min-width: 20px;
-  min-height: 40px;
-  
+  max-width: 120px;
+
 }
 .draftedCardImage:hover{
   scale: 1.1;
@@ -59,10 +59,10 @@ html {
   overflow: hidden;
   text-align: center;
   white-space: pre-wrap;
-  background-color: rgba(110, 159, 214, 0.734);
+  background-color: rgb(94, 164, 245);
 
 font-family: "Times New Roman", Times, serif;
-font-size: 20px;
+font-size: 22px;
 letter-spacing: -0.8px;
 word-spacing: 1px;
 color: #000000;
@@ -96,6 +96,7 @@ grid-area: cardInfo;
   display: flex;
   background-color: rgba(245, 105, 105, 0.686);
   order: 2;
+  overflow: hidden;
   
 }
 
@@ -109,6 +110,7 @@ grid-area: cardInfo;
 
 
 .draftedCards { 
+  
   flex: 3;
   order: 2;
   background-color: #b0f5b0;

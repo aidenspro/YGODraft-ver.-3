@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, createRef } from 'react';
 import CardArray from './CardArray';
 
 const cardArray = CardArray();
 
 export default function createCard(props) {
   const [cardJSON, setCardJSON] = useState([]);
+  const ref = useRef();
 
   function getRandomInt() {
+    
     //console.log(cardArray[getRandomInt()])
     return Math.floor(Math.random() * cardArray.length);
   }
@@ -59,12 +61,24 @@ export default function createCard(props) {
     );
   };
 
+  const handleOnLoad = () => {
+   // ref.current.style = "transform: translatey(0px)"
+    
+  }
+
+  const handleOnClick = () => {
+    props.handleOnClick(cardInfo)
+  };
+
+
   return (
     <img
+      ref={ref}
       id={cardInfo[0]}
-      onClick={() => props.handleOnClick(cardInfo)}
+      onClick={() => handleOnClick()}
       onMouseEnter={() => setBigImage()}
       className="cardImage"
+      onLoad={() => handleOnLoad()}
       src={
         'https://storage.googleapis.com/ygoprodeck.com/pics/' +
         cardInfo[0] +

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, createRef } from 'react';
 
 export default function draftPreview(props) {
 const divs = [];
+const offset = 10;
 
 const setBigImage = (i) => {
   props.setCardInfo(props.draftedCards[i]);
@@ -23,6 +24,7 @@ const setBigImage = (i) => {
     props.draftedCards[i][0] +'.jpg'}
     alt={props.draftedCards[i][1]}
   />
+ 
   }
 
   return <div > {divs} </div>;

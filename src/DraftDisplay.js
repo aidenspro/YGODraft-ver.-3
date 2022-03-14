@@ -8,8 +8,6 @@ let packNum = 1; //number of the current card set
 const draftedCards = [];
 
 export default function draftDisplay(props) {
-  const testCard = [55144522,"Click Here","To Start Draft","test"]
-  const coverRef = useRef();
 
   //when updated reloads the createCard component for a new card
   const [changeCard, setChangeCard] = useState(0);
