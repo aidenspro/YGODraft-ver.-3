@@ -7,8 +7,11 @@ html {
 }
 
 .cardImage{
-width: 100%;
-height: 100%;
+  height: 100%;
+  width: 100%;
+  max-height: 300px;
+  max-width: 240px;
+
 }
 .draftedCardImage{
   max-width: 12%;
@@ -64,52 +67,44 @@ text-transform: none;
 grid-area: cardInfo;
 }
 
-.container {  
 
-
-}
-
-.bigPreview {  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 50% 50%; 
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "previewCardImage"
-    "cardInfo";
-  grid-area: bigPreview;
+.bigPreview {  
+  max-width: 20%;
   background-color: rgb(0, 0, 0);
-  max-height: 40%;
-  max-width: 40%;
   border: 5px solid #8a7f7f
 }
 
 .previewCardImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  max-height: 400px;
+  max-width: 320px;
    }
 
 
 
 .cardDisplay {
-
-  padding: 5px;
-  display: grid; 
-  grid-template-columns: 20% 20% 20% 20% 20%; 
-  grid-template-rows: 100%; 
-  gap: 0px 10px; 
-  grid-template-areas: 
-    ". . link . . "
-    ". . . . . "; 
-  grid-area: cardDisplay; 
+  margin: 20px;
+  display: flex;
   background-color: rgba(2, 2, 2, 0.686);
+
+
 }
 
-
+.container {
+  display: grid; 
+  grid-template-columns: 100%; 
+  grid-template-rows: 40% 60%; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "cardDisplay"
+    "bottomHalf"; 
+}
+.cardDisplay { grid-area: cardDisplay; }
+.bottomHalf {
+  display: flex;
+}
 
 .draftedCards { grid-area: draftedCards; 
-
+  flex: 3;
 }
