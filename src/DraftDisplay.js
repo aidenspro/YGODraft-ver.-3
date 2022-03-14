@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, createRef } from 'react';
 import CreateCard from './CreateCard';
 import DraftPreview from './DraftPreview';
 import CreateDeckList from './CreateDeckList';
-
+import CardInfo from './CardInfo';
 
 let packNum = 1; //number of the current card set
 const draftedCards = [];
@@ -36,6 +36,7 @@ export default function draftDisplay(props) {
       cardArray[i] = (
         <CreateCard
           key={i}
+          packNum={packNum}
           changeCard={changeCard}
           handleOnClick={handleOnClick}
           setBigImage={setBigImage}
@@ -58,10 +59,7 @@ export default function draftDisplay(props) {
   </div>
   <div className="container2" >
     <div className="cardInfo">
-        {cardInfo[1]}{'\n'}
-        {cardInfo[4] + "/" + cardInfo[3]}{'\n'}
-        {cardInfo[11]}{'\n'}
-        {cardInfo[2]}
+        <CardInfo cardInfo={cardInfo}/>
     </div>
     <div class="draftedCards"><DraftPreview draftedCards={draftedCards} setBigImage={setBigImage}setCardInfo={setCardInfo}/></div>
    </div>

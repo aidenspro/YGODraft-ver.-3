@@ -62,7 +62,7 @@ export default function createCard(props) {
   };
 
   const handleOnLoad = () => {
-   // ref.current.style = "transform: translatey(0px)"
+    ref.current.style = "transform: translatey(0px)"
     
   }
 
@@ -70,6 +70,9 @@ export default function createCard(props) {
     props.handleOnClick(cardInfo)
   };
 
+  useEffect(() => {
+  ref.current.style = "transform: translatey(-500px)" 
+  },[props.packNum])
 
   return (
     <img
