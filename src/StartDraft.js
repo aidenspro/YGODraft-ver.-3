@@ -3,7 +3,7 @@ import DraftDisplay from './DraftDisplay'
 import SettingsButtons from './SettingsButtons'
 
 export default function startDraft(){
-const [start, setStart] = useState(0);
+const [start, setStart] = useState(1);
 const [cardsPerPack, setCardsPerPack] = useState(3);
 const [numberOfPacks, setNumberOfPacks] = useState(5);
 const [extraDeckPacks, setExtraDeckPacks] = useState(5);
