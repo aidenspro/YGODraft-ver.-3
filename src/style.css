@@ -41,7 +41,6 @@ html {
   background-color: rgba(245, 105, 105, 0.686);
   order: 2;
   overflow: hidden;
-  background-image: url ;
   background-image: url('https://stackblitz.com/files/react-26cvwe/github/aidenspro/Yu-Gi-Oh-Draft-take-2/master/src/components/cardbackground.jpg');
 }
 .cardDisplay:hover{
