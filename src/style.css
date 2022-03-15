@@ -41,7 +41,7 @@ html {
   background-color: rgba(245, 105, 105, 0.686);
   order: 2;
   overflow: hidden;
-  background-image: url('https://stackblitz.com/files/react-26cvwe/github/aidenspro/Yu-Gi-Oh-Draft-take-2/master/src/components/cardbackground.jpg');
+  background-image: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 }
 .cardDisplay:hover{
   overflow-X: auto;
@@ -84,6 +84,9 @@ html {
 .cardInfo {
   order: 1;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
   max-width: 320px;
   max-height: 500px;
   min-height: 500px;
@@ -103,7 +106,7 @@ text-decoration: none;
 font-style: normal;
 font-variant: normal;
 text-transform: none;
-grid-area: cardInfo;
+
 }
 
 .cardInfo:hover{
@@ -125,16 +128,24 @@ grid-area: cardInfo;
 .cardName{
   background-color: rgb(153, 92, 92);
   font-size: 26px;
+ 
+  order: 1;
 }
 
 .stats{
   display: flex;
-  bottom: 0;
+  order: 4;
+
 }
 .attack{
   background-color: rgb(247, 72, 72);
-  order: 1;
   flex: 1;
+  order: 1;
+}
+.linkAttack{
+  background-color: rgb(247, 72, 72);
+
+  order: 4;
 }
 
 .defense{
@@ -144,10 +155,14 @@ grid-area: cardInfo;
 }
 
 .description{
+  order: 3;
+  flex: 5;
   background-color: rgb(134, 142, 175);
 }
 
 .type{
+  
+  order: 2;
   background-color: rgb(100, 105, 128);
 }
 
