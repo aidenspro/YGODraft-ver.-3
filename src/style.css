@@ -128,8 +128,8 @@ text-transform: none;
 .cardName{
   background-color: rgb(153, 92, 92);
   font-size: 26px;
- 
   order: 1;
+  background-image: linear-gradient(to right, rgb(123, 92, 92),rgb(145, 103, 123));
 }
 
 .stats{
@@ -157,7 +157,8 @@ text-transform: none;
 .description{
   order: 3;
   flex: 5;
-  background-color: rgb(134, 142, 175);
+  background-image: linear-gradient(to top, rgb(119, 86, 86),rgb(134, 142, 175));
+
 }
 
 .type{

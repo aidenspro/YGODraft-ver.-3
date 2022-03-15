@@ -38,7 +38,7 @@ export default function cardInfo(props) {
     return(
     <div className={"cardInfo"}>
       <div className='cardName'> {cardInfo[1]} </div>
-      <div className='type'> {cardInfo[4] + "/" + cardInfo[3].split(" ")[0]}{"\n"} </div>
+      <div className='type'> {cardInfo[4] + "/" + cardInfo[3].split(" ")[0]} </div>
       <div className='description'> {cardInfo[2]} </div>
     </div>)
     }else
