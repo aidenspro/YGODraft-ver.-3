@@ -1,36 +1,19 @@
 import React, { useState, useEffect, useRef, createRef } from 'react';
 import DraftDisplay from './DraftDisplay'
+import SettingsButtons from './SettingsButtons'
 
 export default function startDraft(){
 const [start, setStart] = useState(0);
-const [cardsPerPack, setCardsPerPack] = useState(5);
+const [cardsPerPack, setCardsPerPack] = useState(3);
 const [numberOfPacks, setNumberOfPacks] = useState(5);
 const [extraDeckPacks, setExtraDeckPacks] = useState(5);
 
 if(start == 0)
 return(
   <div className={'startDiv'}>
-  <div className='numCards'>Cards Per Pack
-    <div className='buttonHolder'>
-      <button className='sbut' onClick={() => setCardsPerPack(2)}> 2 </button>
-      <button className='sbut' onClick={() => setCardsPerPack(5)}> 5 </button>
-      <button className='sbut' onClick={() => setCardsPerPack(10)}> 10 </button>
-    </div>
-  </div>
-  <div className='numPacks'>Number of Packs
-    <div className='buttonHolder'>
-      <button className='sbut' onClick={() => setNumberOfPacks(5)}> 5 </button>
-      <button className='sbut' onClick={() => setNumberOfPacks(10)}> 10 </button>
-      <button className='sbut' onClick={() => setNumberOfPacks(15)}> 15 </button>
-    </div>
-  </div>
-  <div className='numExtra'>Extra Deck Packs
-    <div className='buttonHolder'>
-      <button className='sbut' onClick={() => setExtraDeckPacks(0)}> 0 </button>
-      <button className='sbut' onClick={() => setExtraDeckPacks(5)}> 5 </button>
-      <button className='sbut' onClick={() => setExtraDeckPacks(10)}> 10 </button>
-    </div>
-  </div>
+  <SettingsButtons text={"Number of Cards Per Pack"} setSetting={setCardsPerPack} values={[2,5,10]}/>
+  <SettingsButtons text={"Number of Packs Per Draft"} setSetting={setNumberOfPacks} values={[2,5,10]}/>
+  <SettingsButtons text={"Number of Extra-Packs Per Draft"} setSetting={setExtraDeckPacks} values={[2,5,10]}/>
   <button className='startDraft'onClick={() => setStart(1)}> Start Draft </button>
   </div>)
 else

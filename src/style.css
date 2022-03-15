@@ -41,6 +41,7 @@ html {
   background-color: rgba(245, 105, 105, 0.686);
   order: 2;
   overflow: hidden;
+  background-image: url ;
   
 }
 .cardDisplay:hover{
@@ -154,9 +155,9 @@ grid-area: cardInfo;
 /*--------------------------------Start / options page------------------------------------------------*/
 
 .startDiv{
-  background-color: aliceblue;
+  
   display: flex;
-  height: 500px;
+  height: 200px;
 }
 
 .startDraft{
@@ -164,27 +165,20 @@ grid-area: cardInfo;
   height: 10%;
   position: absolute;
   left: 40%;
-  top: 25%;
+  top: 15%;
 }
 .numCards{
+  background-color: aliceblue;
+  border-radius: 10px;
   border: 5px solid #000000;
   text-align: center;
   flex: 1;
   order: 1;
 }
-.numPacks{
-  border: 5px solid #000000;
-  text-align: center;
-  flex: 1;
-  order: 2;
-}
-.numExtra{
-  border: 5px solid #000000;
-  text-align: center;
-  flex: 1;
-  order: 3;
-}
+
 .buttonHolder{
+  margin-left: 5px;
+  margin-right: 5px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   display: grid;
