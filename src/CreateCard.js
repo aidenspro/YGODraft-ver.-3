@@ -1,20 +1,25 @@
 import React, { useState, useEffect, useRef, createRef } from 'react';
 import CardArray from './CardArray';
+import CardArrayExtra from './CardArrayExtra';
 
 const cardArray = CardArray();
+const cardArrayExtra = CardArrayExtra();
 
-export default function createCard(props) {
+export default function createCard(props) {//----------------------
   const [cardJSON, setCardJSON] = useState([]);
   const ref = useRef();
 
-  function getRandomInt() {
-    
-    //console.log(cardArray[getRandomInt()])
-    return Math.floor(Math.random() * cardArray.length);
+
+  function getArray() {
+      
+    if(props.packNum <= props.extraDeckPacks){
+      return cardArrayExtra[Math.floor(Math.random() * cardArrayExtra.length)]
+    }else{
+      return cardArray[Math.floor(Math.random() * cardArray.length)]}
   }
 
   useEffect(() => {
-    fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?id=' + cardArray[getRandomInt()])
+    fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?id=' + getArray())
       .then((response) => {
         return response.json();
       })

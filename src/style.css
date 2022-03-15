@@ -6,34 +6,9 @@ html {
   background-color: rgb(61, 61, 61);
 }
 
-.cardImage{
+.main{
   transition: all .5s ease;
-  height: 100%;
-  width: 100%;
-  margin-left: 15px;
-  margin-right: 15px;
-  max-width: 240px;
-  min-width: 100px;
 }
-
-
-.draftedCardImage{
-  max-width: 120px;
-
-}
-.draftedCardImage:hover{
-  scale: 1.1;
- }
- 
-.cardImage:hover{
- 
- scale: 1.2;
- cursor: pointer;
-}
-
-.cardInfo:hover{
-  overflow-y: auto;
- }
 
  .fakebutton{
   grid-area: link;
@@ -48,7 +23,64 @@ html {
 .link{
   grid-area: link;
 }
+.container {
+  display: flex;
+  margin-top: 20px;
+}
+.container2{
+  display: flex;
+}
 
+
+/*---------------------------------------Drafted and random Cards------------------------------*/
+.cardDisplay {
+  padding: 20px;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  background-color: rgba(245, 105, 105, 0.686);
+  order: 2;
+  overflow: hidden;
+  
+}
+.cardDisplay:hover{
+  overflow-X: auto;
+ }
+
+ .cardImage{
+  transition: all .5s ease;
+  height: 100%;
+  width: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  max-width: 240px;
+  min-width: 100px;
+}
+
+.cardImage:hover{
+ 
+  scale: 1.2;
+  cursor: pointer;
+ }
+
+
+.draftedCards { 
+  flex: 3;
+  order: 2;
+  background-color: #4fbd4f;
+}
+
+
+.draftedCardImage{
+  max-width: 120px;
+
+}
+.draftedCardImage:hover{
+  scale: 1.1;
+ }
+ 
+
+/*----------------------------------------------Card Info and Preview----------------------*/
 .cardInfo {
   order: 1;
   flex: 1;
@@ -74,7 +106,9 @@ text-transform: none;
 grid-area: cardInfo;
 }
 
-
+.cardInfo:hover{
+  overflow-y: auto;
+ }
 
 .previewCardImage {
   height: 100%;
@@ -88,36 +122,6 @@ grid-area: cardInfo;
    }
 
 
-
-.cardDisplay {
-  padding: 20px;
-  justify-content: center;
-  width: 100%;
-  display: flex;
-  background-color: rgba(245, 105, 105, 0.686);
-  order: 2;
-  overflow: hidden;
-  
-}
-.cardDisplay:hover{
-  overflow-X: auto;
- }
-
-.container {
-  display: flex;
-  margin-top: 20px;
-}
-.container2{
-  display: flex;
-}
-
-
-.draftedCards { 
-  flex: 3;
-  order: 2;
-  background-color: #4fbd4f;
-}
-
 .cardName{
   background-color: rgb(153, 92, 92);
   font-size: 26px;
@@ -125,9 +129,8 @@ grid-area: cardInfo;
 
 .stats{
   display: flex;
-  
+  bottom: 0;
 }
-
 .attack{
   background-color: rgb(247, 72, 72);
   order: 1;
@@ -146,4 +149,51 @@ grid-area: cardInfo;
 
 .type{
   background-color: rgb(100, 105, 128);
+}
+
+/*--------------------------------Start / options page------------------------------------------------*/
+
+.startDiv{
+  background-color: aliceblue;
+  display: flex;
+  height: 500px;
+}
+
+.startDraft{
+  width: 20%;
+  height: 10%;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+}
+.numCards{
+  border: 5px solid #000000;
+  text-align: center;
+  flex: 1;
+  order: 1;
+}
+.numPacks{
+  border: 5px solid #000000;
+  text-align: center;
+  flex: 1;
+  order: 2;
+}
+.numExtra{
+  border: 5px solid #000000;
+  text-align: center;
+  flex: 1;
+  order: 3;
+}
+.buttonHolder{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  display: grid;
+}
+.sbut{
+  height: 45px;
+}
+
+.sbutSelected{
+  background-color: #4fbd4f;
+  height: 45px;
 }

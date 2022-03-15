@@ -41,6 +41,7 @@ export default function draftDisplay(props) {
           handleOnClick={handleOnClick}
           setBigImage={setBigImage}
           setCardInfo={setCardInfo}
+          extraDeckPacks={props.extraDeckPacks}
         />
       );
       return cardArray;
@@ -52,7 +53,7 @@ export default function draftDisplay(props) {
   };
 
   return (
-<div>
+<div className="main">
   <div className="container">
     <div className="previewCardImage">{bigImage}</div>
     <div className="cardDisplay"> {getCards()} </div>
