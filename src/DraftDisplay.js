@@ -6,11 +6,12 @@ import CardInfo from './CardInfo';
 
 let packNum = 1; //number of the current card set
 const draftedCards = [];
-
+let cardsLoaded = 0;
 export default function draftDisplay(props) {
 
   //when updated reloads the createCard component for a new card
   const [changeCard, setChangeCard] = useState(0);
+  const [loadCheck, setLoadCheck] = useState(0);
   const [bigImage, setBigImage] = useState(
     <img id={"start card"} 
         className='previewCardImage'
@@ -29,6 +30,15 @@ export default function draftDisplay(props) {
     
   };
 
+  const handleOnLoad = () => {
+    cardsLoaded++;
+    if(cardsLoaded == props.cardsPerPack){
+      cardsLoaded = 0;
+      console.log('here')
+  
+    }
+  }
+
   const getCards = () => {
     const cardArray = [];
     if(packNum != (props.numberOfPacks + 1) ){
@@ -42,6 +52,9 @@ export default function draftDisplay(props) {
           setBigImage={setBigImage}
           setCardInfo={setCardInfo}
           extraDeckPacks={props.extraDeckPacks}
+          handleOnLoad={handleOnLoad}
+          loadCheck={loadCheck}
+          numCards={props.cardsPerPack}
         />
       );
       return cardArray;

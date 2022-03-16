@@ -40,11 +40,11 @@ html {
   display: flex;
   background-color: rgba(245, 105, 105, 0.686);
   order: 2;
-  overflow: hidden;
+  min-width: 600px;
   background-image: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 }
 .cardDisplay:hover{
-  overflow-X: auto;
+  
  }
 
  .cardImage{
@@ -55,6 +55,7 @@ html {
   margin-right: 15px;
   max-width: 240px;
   min-width: 100px;
+  visibility: visible;
 }
 
 .cardImage:hover{
@@ -65,15 +66,19 @@ html {
 
 
 .draftedCards { 
+  display: flex;
+  align-content: space-between;
+  min-width: 600px;
   flex: 3;
   order: 2;
-  background-color: #4fbd4f;
+  border: 5px solid #000000;
+  background-image: linear-gradient(to bottom right, rgb(39, 51, 85),rgb(122, 92, 146));
 }
 
 
 .draftedCardImage{
   max-width: 120px;
-
+  flex: 1;
 }
 .draftedCardImage:hover{
   scale: 1.1;
