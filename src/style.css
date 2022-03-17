@@ -84,6 +84,15 @@ html {
   scale: 1.1;
  }
  
+ .reset{
+   white-space: pre-wrap;
+   text-align: center;
+   position: absolute;
+   border-radius: 5px;
+   top: 3%;
+   right: 1%;
+   background-image: linear-gradient(to bottom right, rgb(75, 80, 92),rgb(122, 92, 146));
+ }
 
 /*----------------------------------------------Card Info and Preview----------------------*/
 .cardInfo {

@@ -7,6 +7,7 @@ import CardInfo from './CardInfo';
 let packNum = 1; //number of the current card set
 const draftedCards = [];
 let cardsLoaded = 0;
+let differential = 0;
 export default function draftDisplay(props) {
 
   //when updated reloads the createCard component for a new card
@@ -34,14 +35,21 @@ export default function draftDisplay(props) {
     cardsLoaded++;
     if(cardsLoaded == props.cardsPerPack){
       cardsLoaded = 0;
-      console.log('here')
-  
+      setLoadCheck(loadCheck + 1)
     }
   }
 
+  const handleResetClick = () => {
+     //reload card component
+    setChangeCard(packNum); //update pack#
+    setLoadCheck(loadCheck + 1)
+    packNum++;
+    differential++;
+  };
+
   const getCards = () => {
     const cardArray = [];
-    if(packNum != (props.numberOfPacks + 1) ){
+    if(packNum != (props.numberOfPacks + 1 + differential) ){
     for (let i = 0; i < props.cardsPerPack; i++)
       cardArray[i] = (
         <CreateCard
@@ -55,6 +63,7 @@ export default function draftDisplay(props) {
           handleOnLoad={handleOnLoad}
           loadCheck={loadCheck}
           numCards={props.cardsPerPack}
+          differential={differential}
         />
       );
       return cardArray;
@@ -65,11 +74,16 @@ export default function draftDisplay(props) {
     return cardArray;
   };
 
+
+
   return (
 <div className="main">
   <div className="container">
     <div className="previewCardImage">{bigImage}</div>
     <div className="cardDisplay"> {getCards()} </div>
+    <button className={'reset'} onClick={() => handleResetClick()}>
+       Reset{'\n'} Cards 
+    </button>
   </div>
   <div className="container2" >
     <div className="cardInfo">

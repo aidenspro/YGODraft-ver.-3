@@ -4,8 +4,8 @@ import SettingsButtons from './SettingsButtons'
 
 export default function startDraft(){
 const [start, setStart] = useState(1);
-const [cardsPerPack, setCardsPerPack] = useState(3);
-const [numberOfPacks, setNumberOfPacks] = useState(5);
+const [cardsPerPack, setCardsPerPack] = useState(5);
+const [numberOfPacks, setNumberOfPacks] = useState(10);
 const [extraDeckPacks, setExtraDeckPacks] = useState(5);
 
 if(start == 0)

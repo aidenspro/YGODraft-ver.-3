@@ -5,6 +5,7 @@ import CardArrayExtra from './CardArrayExtra';
 const cardArray = CardArray();
 const cardArrayExtra = CardArrayExtra();
 
+
 export default function createCard(props) {//----------------------
   const [cardJSON, setCardJSON] = useState([]);
   const ref = useRef();
@@ -12,7 +13,7 @@ export default function createCard(props) {//----------------------
 
   function getArray() {
       
-    if(props.packNum <= props.extraDeckPacks){
+    if((props.packNum - props.differential )<= props.extraDeckPacks){
       return cardArrayExtra[Math.floor(Math.random() * cardArrayExtra.length)]
     }else{
       return cardArray[Math.floor(Math.random() * cardArray.length)]}
@@ -68,7 +69,7 @@ export default function createCard(props) {//----------------------
 
   const handleOnLoad = () => {
     props.handleOnLoad();
-    ref.current.style = "transform: translatey(0px)" 
+    
     
   }
 
@@ -81,6 +82,16 @@ export default function createCard(props) {//----------------------
   },[props.packNum])
 
 
+  useEffect(() => {
+    console.log('testing')
+    ref.current.style = "transform: translatey(0px)" 
+    },[props.loadCheck])
+
+  const handleOnError = (event) => {
+    console.log('check')
+    console.log(event)
+  };
+
 
   return (
     <img
@@ -90,6 +101,7 @@ export default function createCard(props) {//----------------------
       onMouseEnter={() => setBigImage()}
       className="cardImage"
       onLoad={() => handleOnLoad()}
+      onError={handleOnError}
       src={
         'https://storage.googleapis.com/ygoprodeck.com/pics/' +
         cardInfo[0] +
