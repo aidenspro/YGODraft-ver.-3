@@ -83,12 +83,11 @@ export default function createCard(props) {//----------------------
 
 
   useEffect(() => {
-    console.log('testing')
     ref.current.style = "transform: translatey(0px)" 
     },[props.loadCheck])
 
   const handleOnError = (event) => {
-    console.log('check')
+    console.log('error')
     console.log(event)
   };
 

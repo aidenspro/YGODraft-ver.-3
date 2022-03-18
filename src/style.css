@@ -101,6 +101,7 @@ html {
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  
   max-width: 320px;
   max-height: 500px;
   min-height: 500px;
@@ -109,6 +110,9 @@ html {
   text-align: center;
   white-space: pre-wrap;
   background-color: rgb(23, 41, 61);
+  border: 3px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 5px solid #000000;
 
 font-family: "Times New Roman", Times, serif;
 font-size: 22px;
@@ -140,10 +144,9 @@ text-transform: none;
 
 
 .cardName{
-  background-color: rgb(153, 92, 92);
   font-size: 26px;
   order: 1;
-  background-image: linear-gradient(to right, rgb(123, 92, 92),rgb(145, 103, 123));
+  background-image: linear-gradient(to right, rgb(134, 113, 113),rgb(231, 135, 136));
 }
 
 .stats{
@@ -169,16 +172,20 @@ text-transform: none;
 }
 
 .description{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   order: 3;
   flex: 5;
-  background-image: linear-gradient(to top, rgb(119, 86, 86),rgb(134, 142, 175));
+  background-image: linear-gradient(to top, rgb(204, 166, 166),rgb(143, 158, 216));
 
 }
 
 .type{
   
   order: 2;
-  background-color: rgb(100, 105, 128);
+  background-image: linear-gradient(to right, rgb(134, 113, 113),rgb(231, 135, 136));
 }
 
 /*--------------------------------Start / options page------------------------------------------------*/
