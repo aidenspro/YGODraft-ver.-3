@@ -26,11 +26,12 @@ export default function settingsButtons(props){
   
   return(
     <div className='numCards'>{props.text}
-    <div className='buttonHolder'>
+    <div className='buttonHolder' >
       <button ref={ref} className='sbut' onClick={() => onClick(props.values[0],0)}> {props.values[0]} </button>
       <button ref={ref1} className='sbut' onClick={() => onClick(props.values[1],1)}> {props.values[1]} </button>
       <button ref={ref2} className='sbut' onClick={() => onClick(props.values[2],2)}> {props.values[2]} </button>
     </div>
+    <div className={'startArtwork'+props.artwork} />
   </div>
   )
 }
