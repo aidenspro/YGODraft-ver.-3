@@ -231,12 +231,15 @@ text-transform: none;
   height: 900px;
   background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/96551409-eddd-4b72-92da-7fd74699b762/dcptie0-77540a59-8ac1-4f3c-ba6d-0b8d788401c2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk2NTUxNDA5LWVkZGQtNGI3Mi05MmRhLTdmZDc0Njk5Yjc2MlwvZGNwdGllMC03NzU0MGE1OS04YWMxLTRmM2MtYmE2ZC0wYjhkNzg4NDAxYzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lwjRxCusAN0D84XUeO0aybpR7AGqsY-17FScHkQbxWQ');
   background-size: contain;
+  background-repeat: no-repeat;
+  
 }
 .startArtwork2{
   width: auto;
   height: 900px;
   background-image: url('https://64.media.tumblr.com/eb6237fce10dec57df8fcba13b045a8b/tumblr_n4gmsxHQWL1rie4kjo1_400.png');
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
@@ -245,5 +248,6 @@ text-transform: none;
   height: 900px;
   background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8445259-8599-4d57-a0f9-1fb6161fa7a4/de5k5qx-80223a7b-ccf4-4531-81e5-03774cd025cd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U4NDQ1MjU5LTg1OTktNGQ1Ny1hMGY5LTFmYjYxNjFmYTdhNFwvZGU1azVxeC04MDIyM2E3Yi1jY2Y0LTQ1MzEtODFlNS0wMzc3NGNkMDI1Y2QucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9OIhLv6TsQQk7_KJ1IH50dfFzBEkaA1DKW_RMi6H6pY');
   background-size: contain;
+  background-repeat: no-repeat;
   
 }
