@@ -9,7 +9,7 @@ const setBigImage = (i) => {
   props.setBigImage(
     <img id={props.draftedCards[i][0]} 
       className='previewCardImage'
-      src={'https://storage.googleapis.com/ygoprodeck.com/pics/' +
+      src={'https://images.ygoprodeck.com/images/cards/' +
       props.draftedCards[i][0] +'.jpg'}
       alt={props.draftedCards[i][1]}
     />
@@ -20,7 +20,7 @@ const setBigImage = (i) => {
     divs[i] = <img id={props.draftedCards[i][0]} 
     className='draftedCardImage'
     onMouseEnter={() => setBigImage(i)}
-    src={'https://storage.googleapis.com/ygoprodeck.com/pics/' +
+    src={'https://images.ygoprodeck.com/images/cards/' +
     props.draftedCards[i][0] +'.jpg'}
     alt={props.draftedCards[i][1]}
   />

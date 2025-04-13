@@ -58,7 +58,7 @@ export default function createCard(props) {//----------------------
         id={cardInfo[0]}
         className='previewCardImage'
         src={
-          'https://storage.googleapis.com/ygoprodeck.com/pics/' +
+          'https://images.ygoprodeck.com/images/cards/' +
           cardInfo[0] +
           '.jpg'
         }
@@ -102,7 +102,7 @@ export default function createCard(props) {//----------------------
       onLoad={() => handleOnLoad()}
       onError={handleOnError}
       src={
-        'https://storage.googleapis.com/ygoprodeck.com/pics/' +
+        'https://images.ygoprodeck.com/images/cards/' +
         cardInfo[0] +
         '.jpg'
       }
